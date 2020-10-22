@@ -13,7 +13,6 @@ from matplotlib_venn import venn2, venn2_circles, venn2_unweighted
 import re
 
 # for acessing private playlists
-
 scope = 'playlist-read-private'
 username = '8eia8ggl4ipbhouhun62o9y8i'
 client_id = '3cb41450f466404399f3e0de3e4c89f2'
@@ -72,9 +71,9 @@ for track in track_id:
     features.append(sp.audio_features(track))
 
 # initialising all tracks with corresponding feature values and storing in a dictionary
-for i in range(0, 50):
+for i in range(50):
     tracks[i+1] = {}
-for i in range(0, 50):
+for i in range(50):
     tracks[i+1]['number'] = i+1
     tracks[i+1]['time'] = track_time[i]
     tracks[i+1]['name'] = track_name[i]
@@ -132,6 +131,5 @@ plt.show()
 # since an album contains a mixture of sad and energetic songs. so we take a look
 # at the number of unique artists and albums in the history :
 
-def val():
-    return (dataframe['album'].value_counts(ascending=False),dataframe['artist'].value_counts(ascending=False))
-
+print(dataframe['album'].value_counts(ascending=False))
+print(dataframe['artist'].value_counts(ascending=False))
